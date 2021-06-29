@@ -33,9 +33,13 @@ body::-webkit-scrollbar-thumb {
 
 body {
   /* background-color: #1a0040; */
+  background-image: url('backimage.png');
   background-color: var(--niceblack);
 }
-
+.wrap {
+  background-image: url('backimage.png');
+  mix-blend-mode: luminosity;
+}
 /* #head_bar_image {
   visibility: hidden;
   position: absolute;
@@ -57,12 +61,19 @@ body {
   /* animation: header 1s cubic-bezier(1, 0, 0, 1) infinite; */
 }
 
-.section__header #krnd {
+/* .section__header #krnd {
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   font-weight: bold;
   color: white;
   user-select: none;
+  margin-left: 20px;
+  animation: blinker 0.5s ease-in-out;
+} */
+
+.section__header #logo1 {
+  position: relative;
+  width: 100px;
   margin-left: 20px;
   animation: blinker 0.5s ease-in-out;
 }
@@ -101,9 +112,7 @@ header {
 }
 
 .section__img {
-  align-self: center;
   /* background-color: #eb1043; */
-  background: var(--niceblack);
   /* background: linear-gradient(
     45deg,
     rgba(235, 16, 68, 1) 20%,
