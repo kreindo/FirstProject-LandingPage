@@ -1,0 +1,23 @@
+:root {
+  --red: #eb1044;
+  --purple: #1a0040;
+}
+
+@keyframes blinker {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 20px;
+  }
+}
+
+@keyframe header {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
