@@ -2,14 +2,23 @@
   --red: #eb1044;
   --purple: #1a0040;
   --darkerpurple: #12002c80;
-  --niceblack: rgb(2, 0, 36);
+  --niceblack: rgb(4, 0, 78);
 }
-
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Slab', serif; 
+*/
 * {
   font-family: 'Courier New', Courier, monospace;
   text-align: justify;
   margin: 0px;
   padding: 0px;
+}
+
+::selection {
+  background-color: var(--red);
+  color: white;
 }
 
 body::-webkit-scrollbar {
@@ -35,6 +44,7 @@ body {
   width: 100%;
 } */
 .section__header {
+  /* background-color: var(--niceblack); */
   background-color: var(--niceblack);
   display: flex;
   justify-content: first baseline;
@@ -43,12 +53,13 @@ body {
 }
 
 .section__header:hover {
-  box-shadow: 10px 10px 10px #00000071;
+  box-shadow: 10px 10px 10px 10px #00000071;
   /* animation: header 1s cubic-bezier(1, 0, 0, 1) infinite; */
 }
 
 .section__header #krnd {
-  font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
   font-weight: bold;
   color: white;
   user-select: none;
@@ -59,6 +70,11 @@ body {
 #krnd:hover {
   /* background-color: var(--purple); */
   color: white;
+}
+
+#krndin {
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
 }
 
 header {
@@ -74,18 +90,20 @@ header {
 
 .section__content article {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .section__content .h1__div {
   margin: 10px;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .section__img {
   align-self: center;
   /* background-color: #eb1043; */
-  background: rgb(2, 0, 36);
+  background: var(--niceblack);
   /* background: linear-gradient(
     45deg,
     rgba(235, 16, 68, 1) 20%,
@@ -98,11 +116,23 @@ header {
   filter: opacity(0.5);
   width: 250px;
   mix-blend-mode: luminosity;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
+::-webkit-keygen-select {
+  background-color: var(--red);
+}
+
+.section__para {
+  display: flex;
+  justify-content: space-evenly;
+}
 .section__content #p1 {
+  font-family: 'Roboto Mono', monospace;
   margin: 10px;
   text-indent: 50px;
+  width: 50%;
   color: white;
   line-height: 1.3rem;
 }
