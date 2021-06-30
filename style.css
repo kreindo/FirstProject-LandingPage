@@ -145,6 +145,7 @@ header {
 .para__img {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .section__para #img1 {
