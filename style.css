@@ -156,8 +156,10 @@ header {
   -webkit-user-drag: none;
 }
 .section__content #p1 {
+  background: rgba(2, 0, 46, 0.767);
   font-family: 'Roboto Mono', monospace;
   margin: 10px;
+  padding: 10px;
   text-indent: 50px;
   width: 50%;
   color: white;
