@@ -177,6 +177,7 @@ header {
   text-indent: 50px;
   width: 50%;
   color: white;
+  font-size: 14px;
   line-height: 1.3rem;
 }
 
@@ -189,6 +190,7 @@ header {
 }
 #section__lower p {
   margin: 0 80px;
+  width: 50%;
 }
 
 .section__content_2 {
