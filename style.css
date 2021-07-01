@@ -17,6 +17,10 @@ font-family: 'Roboto Slab', serif;
   padding: 0px;
 }
 
+p {
+  font-size: 14px;
+}
+
 ::selection {
   background-color: var(--red);
   color: white;
@@ -45,18 +49,26 @@ body {
 .section__header {
   /* background-color: var(--niceblack); */
   display: flex;
-  margin: 10px;
-
-  flex: 1;
+  justify-content: space-between;
+  align-items: center;
 }
 a {
-  margin: 0px;
+  color: white;
   text-decoration: none;
 }
+
+.section__header .nav {
+  position: relative;
+  top: 5px;
+  right: 50px;
+}
+
 .section__header #h1_header {
+  position: relative;
   color: white;
+  padding: 10px 60px;
+  top: 10px;
   text-decoration-color: var(--red);
-  margin: 40px 60px;
   font-size: 30px;
 }
 
@@ -139,7 +151,7 @@ header {
 
 .section__para {
   background: rgba(2, 0, 46, 0.767);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -149,6 +161,8 @@ header {
   width: 250px;
   height: 250px;
   filter: opacity(0.5);
+  user-select: none;
+  -webkit-user-drag: none;
   mix-blend-mode: luminosity;
   margin: 20px;
   padding: 20px;
@@ -160,14 +174,6 @@ header {
   justify-content: space-evenly;
 }
 
-.section__para #img1 {
-  margin: 10px;
-  filter: opacity(0.5);
-  width: 250px;
-  mix-blend-mode: luminosity;
-  user-select: none;
-  -webkit-user-drag: none;
-}
 .section__content #p1,
 .section__content #p2 {
   /* background: rgba(2, 0, 46, 0.767); */
@@ -177,14 +183,13 @@ header {
   text-indent: 50px;
   width: 50%;
   color: white;
-  font-size: 14px;
   line-height: 1.3rem;
 }
 
 #section__lower {
   position: relative;
   z-index: 2;
-  padding: 200px 0;
+  padding: 30px;
   background: var(--niceblack);
   color: white;
 }
@@ -194,19 +199,24 @@ header {
 }
 
 .section__content_2 {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   margin: 20px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-.section__content_2 .img__flex {
-  margin: 60px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  row-gap: 3rem;
+  align-items: center;
 }
-.section__content_2 #spaceinv {
-  width: 200px;
-  opacity: 0.5;
-  mix-blend-mode: luminosity;
+
+.section__content_2 #button1 {
+  border: 0;
+  padding: 5px 20px;
+}
+
+#button1:hover {
+  color: rgb(0, 0, 0);
+  background: lightgray;
+}
+#button1:active {
+  color: black;
+  background: var(--red);
 }
