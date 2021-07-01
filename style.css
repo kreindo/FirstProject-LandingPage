@@ -63,6 +63,10 @@ a {
   right: 50px;
 }
 
+.nav1 {
+  display: none;
+}
+
 .section__header #h1_header {
   position: relative;
   color: white;
@@ -230,5 +234,14 @@ header {
   .section__content #p1,
   .section__content #p2 {
     width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .section__header .nav {
+    display: none;
+  }
+  .section__header .nav1 {
+    display: block;
+    margin-right: 50px;
   }
 }
