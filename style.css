@@ -154,6 +154,13 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+/* .section__para1 h3 {
+  color: white;
+} */
+.section__para1_inside {
+  display: flex;
+  flex-direction: column;
+}
 .section__para2 {
   background: rgba(2, 0, 46, 0.767);
   margin-bottom: 40px;
@@ -258,7 +265,8 @@ header {
 }
 
 @media (max-width: 1024px) {
-  .section__para img {
+  .section__para1 img,
+  .section__para2 img {
     display: none;
   }
   .section__content #p1,
