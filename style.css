@@ -11,7 +11,7 @@ font-family: 'Roboto Mono', monospace;
 font-family: 'Roboto Slab', serif; 
 */
 * {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   text-align: justify;
   margin: 0px;
   padding: 0px;
@@ -43,7 +43,7 @@ body {
 }
 .wrap {
   background-color: var(--niceblack);
-  background-image: url('backimage.png');
+  background-image: url("backimage.png");
 }
 
 .section__header {
@@ -89,7 +89,7 @@ header .img2head {
 
 #krndin {
   font-size: 1rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 header {
@@ -177,7 +177,7 @@ header {
 .section__content #p1,
 .section__content #p2 {
   /* background: rgba(2, 0, 46, 0.767); */
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   margin: 10px;
   padding: 10px;
   text-indent: 50px;
@@ -219,4 +219,16 @@ header {
 #button1:active {
   color: black;
   background: var(--red);
+}
+
+@media (max-width: 1024px) {
+  .section__para {
+  }
+  .section__para img {
+    display: none;
+  }
+  .section__content #p1,
+  .section__content #p2 {
+    width: 100%;
+  }
 }
