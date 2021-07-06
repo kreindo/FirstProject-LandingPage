@@ -21,6 +21,10 @@ p {
   font-size: 14px;
 }
 
+.wrapIndex {
+  padding-bottom: 100%;
+}
+
 ::selection {
   background-color: var(--red);
   color: white;
@@ -314,7 +318,9 @@ body {
 
 @media (max-width: 1024px) {
   .section__para1 img,
-  .section__para2 img {
+  .section__para2 img,
+  .section__contact img,
+  .section__wip img {
     display: none;
   }
   .section__content #p1,
@@ -329,5 +335,11 @@ body {
   .section__header .nav1 {
     display: block;
     margin-right: 50px;
+  }
+
+  @media speech {
+    #serial {
+      display: none;
+    }
   }
 }
