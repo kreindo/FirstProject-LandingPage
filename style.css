@@ -237,14 +237,20 @@ td {
   justify-content: center;
   background-color: var(--purpletransparent);
   position: relative;
-  top: 10px;
+  top: 5px;
   transition: 0.5s;
 }
 .prtfl_1:hover,
 .prtfl_2:hover,
 .prtfl_3:hover {
-  top: -10px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.438);
+  top: -5px;
+  /* box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.438); */
+}
+
+.svg {
+  margin: 10px;
+  padding: 10px;
+  filter: invert(1);
 }
 
 .prtfl p {
