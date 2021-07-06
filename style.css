@@ -4,8 +4,10 @@
   --darkerpurple: #12002c80;
   --niceblack: rgb(4, 0, 78);
   --niceblack2: rgb(179, 175, 255);
+  --purpletransparent: rgba(2, 0, 46, 0.767);
 }
 /*
+---Available font:
 font-family: 'Lato', sans-serif;
 font-family: 'Roboto Mono', monospace;
 font-family: 'Roboto Slab', serif; 
@@ -40,15 +42,11 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--red);
 }
 
-body {
-  /* background-color: #1a0040; */
-  /* background-image: url('backimage.png'); */
-  /* background-color: var(--niceblack); */
-}
-
 .section__content1 {
   background-color: var(--niceblack);
   background-image: url('backimage.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .section__header {
@@ -56,9 +54,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 a {
   color: white;
   text-decoration: none;
+}
+
+p {
+  color: white;
 }
 
 .section__header .nav {
@@ -116,13 +119,13 @@ header {
   display: flex;
   align-items: center;
   color: white;
-  background: rgba(2, 0, 46, 0.767);
+  background: var(--purpletransparent);
 }
 .wrap__contact {
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
-  background: rgba(2, 0, 46, 0.767);
+  background: var(--purpletransparent);
 }
 .contact__list {
   flex-grow: 9;
@@ -145,7 +148,7 @@ header {
 .contact__list #pcontact {
   padding-bottom: 40px;
 }
-
+/* Table */
 table {
   width: 80%;
 }
@@ -158,7 +161,8 @@ td {
   text-align: center;
 }
 
-.section__content #article1 {
+.section__content #article1,
+.section__content #article1_prtfl {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -196,22 +200,69 @@ td {
   background-color: var(--red);
 }
 
+/* This is before grip imp.  */
 .section__para1 {
-  background: rgba(2, 0, 46, 0.767);
+  background-color: var(--purpletransparent);
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
+.section__para1_prtfl {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.prtfl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-basis: auto; */
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.prtfl_1,
+.prtfl_2,
+.prtfl_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purpletransparent);
+  transition: 0.5s;
+}
+.prtfl_1:hover,
+.prtfl_2:hover,
+.prtfl_3:hover {
+  top: 10px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.438);
+}
+
+.prtfl p {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  text-indent: 30px;
+}
+
 /* .section__para1 h3 {
   color: white;
 } */
+
 .section__para1_inside {
   display: flex;
   flex-direction: column;
 }
+
 .section__para2 {
-  background: rgba(2, 0, 46, 0.767);
+  background: var(--purpletransparent);
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -219,6 +270,7 @@ td {
 }
 
 .section__para1 #img__para1,
+.section__para1_prtfl #img__para1,
 .section__wip #img__para1,
 .section__contact #img__para1 {
   width: 250px;
@@ -284,9 +336,10 @@ td {
   align-items: center;
 }
 
-.section__content_2 #button1 {
+#button1 {
   border: 0;
   padding: 5px 20px;
+  margin-bottom: 20px;
 }
 
 #button1:hover {
@@ -296,6 +349,26 @@ td {
 #button1:active {
   color: black;
   background: var(--red);
+}
+#button2 {
+  border-width: 2px;
+  border-radius: 20px;
+  border-style: none;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+#button2:after {
+  background-color: violet;
+}
+#button2:hover:after {
+  background-color: var(--red);
+}
+#button2:active {
+  color: black;
+  background: var(--purpletransparent);
 }
 
 .section__content_3 {
@@ -327,6 +400,14 @@ body {
   .section__content #p2 {
     width: 100%;
   }
+  .prtfl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
 }
 @media (max-width: 800px) {
   .section__header .nav {
@@ -336,10 +417,9 @@ body {
     display: block;
     margin-right: 50px;
   }
-
-  @media speech {
-    #serial {
-      display: none;
-    }
+}
+@media speech {
+  #serial {
+    display: none;
   }
 }
