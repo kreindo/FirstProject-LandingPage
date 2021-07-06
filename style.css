@@ -236,12 +236,14 @@ td {
   align-items: center;
   justify-content: center;
   background-color: var(--purpletransparent);
+  position: relative;
+  top: 10px;
   transition: 0.5s;
 }
 .prtfl_1:hover,
 .prtfl_2:hover,
 .prtfl_3:hover {
-  top: 10px;
+  top: -10px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.438);
 }
 
